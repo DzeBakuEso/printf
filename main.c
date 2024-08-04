@@ -1,4 +1,4 @@
-#include <stdio.h>   /* Include this header for printf */
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,19 +8,17 @@
  */
 int main(void)
 {
-    int len;
-    int len2;
+    int len; /* Length of the printed output */
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    _printf("Length:[%d]\n", len);
-    printf("Length:[%d]\n", len2);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Percent:[%%]\n");
-    printf("Percent:[%%]\n");
-    return (0);
+    /* Test printing integers */
+    len = _printf("Integer: %d\n", 1234);
+    _printf("Length: [%d]\n", len);
+    len = _printf("Another integer: %i\n", -5678);
+    _printf("Length: [%d]\n", len);
+    
+    /* Test printing percent sign */
+    _printf("Percent sign: %%\n");
+
+    return (0); /* Return success code */
 }
 
